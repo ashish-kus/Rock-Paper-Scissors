@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap');
+:root{
+--text-color: #FFF;
+--white: #fff;
+--headeroutline: hsl(217, 16%, 45%);
+--ScoreText: hsl(229, 64%, 46%);
+--DarkText: hsl(229, 25%, 31%);
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+body{
+  overflow:auto;
+  background:radial-gradient(
+  circle at 50%,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+);
+    min-height: 100%;
+    font-family: Poppins;
+}   
+
+.container{
+  width: 100%;
+  max-width:700px;
+  margin: 0 auto;
+}
+
+header{
+  border: 3px solid var(--headeroutline) ;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 50px 0;
+}
+
+
+h1{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height:1;
+  font-size: 3rem;
+  color:var(--text-color);
+  text-transform: uppercase;
+  margin:0;
+}
+
+h2{
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+}
+h4{
+  color: var(--DarkText);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+}
+.score-container{
+  background-color: var(--white);
+  padding: 2% 5%;
+  align-items:center;
+  border-radius: 10px;
+}
+
+.score-container p{
+  color:var(--DarkText) ;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main{
+  /* background-color: #fff; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width:400px;
+  margin: 100px auto;
+  position:relative;
+}
+
+
+.btn-circle{
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: inset 0 5px rgba(0, 0, 0, 0.1);
+  height: 150px;
+  width: 150px;
+  margin:0 25px;
+}
+
+
+.btm-circle:focus{
+  outline: none;
+}
+
+.btn-circle:active{
+  transform: scale(0.9);
+}
+.btn-circle .wrapper{
+  background-color: #FFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content:center;
+  border-radius: 50%;
+  box-shadow: inset 0 -5px rgba(0, 0, 0, 0.1);
+  min-height: 120px;
+  width: 120px;
+}
+.btn-paper{
+  background: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  /* background-color: #000; */
+}
+
+.btn-scissor{
+
+  background: linear-gradient(to bottom,  hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.btn-rock{
+
+  background: linear-gradient(to bottom,  hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+.btn-rule{
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  font-family: inherit;
+  padding: 10px 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: 10px;
+  right:10px
+}
+.btn-zero{
+  border: transparent;
+  background-color: transparent;
+  position: fixed;
+  bottom: 10px;
+  left:10px
+}
+
+
+
+  /*   SELECTION */
+.btn {
+  border: 2px solid #fff;
+  border-radius:10px;
+  background-color: #fff;
+  color: var(--DarkText);
+  font-size:20px;
+  font-family: inherit;
+  padding: 5px 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.selection{
+  display: none;
+  justify-content: space-between;
+  align-items:center;
+  text-align:center;
+  text-transform: uppercase;
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+.selection .btn-circle{
+  margin: 50px;
+    transform:scale(1.4);
+}
+.big-text{
+  font-size: 2.5rem;
+  margin: 0 0 20px;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+
+.mvbtn{
+  display: none;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #fff;
+  font-family: inherit;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  position: fixed;
+  bottom: 10px;
+  left:140px;
+}
+
+@media (max-width: 480px)
+{
+  header{
+    margin-bottom: 10px;
+  }
+
+  .main{
+    margin-top: 120px;
+  }
+  .selection{
+    display: none;
+    transform:scale(0.9);
+    margin: 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+ .selection .btn-circle{
+    transform: scale(1);
+    margin: 20px;
+  }
+
+  .btn{
+    display: none;
+  }
+
+  h2{
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .big-text{
+    letter-spacing: 5px;
+  }
+
+
+  
+}
