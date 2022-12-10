@@ -144,15 +144,19 @@ main{
   letter-spacing: 2px;
   text-transform: uppercase;
   position: fixed;
-  bottom: 10px;
-  right:10px
+  bottom: 20px;
+  right:20px
 }
 .btn-zero{
+  transform: scale(1.4);
   border: transparent;
   background-color: transparent;
   position: fixed;
-  bottom: 10px;
-  left:10px
+  bottom: 20px;
+  left:20px
+}
+.btn-zero:active{
+  transform: scale(1.5);
 }
 
 

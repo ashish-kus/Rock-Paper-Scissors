@@ -1,9 +1,10 @@
-const buttons = document.querySelectorAll('.btn-circle');
+const buttons = document.querySelectorAll('.pick');
 const scoreEl = document.getElementById('score');
 const main = document.getElementById('main');
 const selection = document.getElementById('selection');
 const reset = document.getElementById('reset')
 const mreset = document.getElementById('mreset')
+const resart = document.getElementById('btn-zero')
 const choices = ['paper', 'rock', 'scissor'];
 const user_select = document.getElementById('user_select')
 const computer_select = document.getElementById('computer_select')
@@ -33,9 +34,14 @@ mreset.addEventListener('click', () => {                 // adding event listene
   main.style.marginTop = '100px';
   selection.style.display = 'none';
   mreset.style.display = 'none';
+
 })
 
+resart.addEventListener('click', () => {                 // adding event listener to play button
+  score = 0;
+  scoreEl.innerText = score;
 
+})
 
 function checkWinner() {
   const computerChoice = pickRandomChoice();
@@ -57,9 +63,11 @@ function checkWinner() {
   }
 
   main.style.display = 'none';
-  // mbtn.style.display = 'inline-block';
   selection.style.display = 'flex';
-  mreset.style.display = 'flex';
+  if (screen.width < 480) {
+    mreset.style.display = 'flex';
+    // do stuff
+  }
 
 }
 
